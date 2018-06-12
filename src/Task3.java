@@ -4,7 +4,7 @@ public class Task3 {
 
         int[] array = {99, 44, 45, 23, 66};
         for (int i = 0; i < array.length; i++) {
-            System.out.print(a[i]);
+            System.out.print(array[i]);
         }
         System.out.println();
 

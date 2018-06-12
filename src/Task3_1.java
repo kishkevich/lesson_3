@@ -7,7 +7,7 @@ public class Task3_1 {
         int min = numberArray[0];
         int max = numberArray[0];
         for (int i = 0; i < numberArray.length; i++) {
-            if (min >numberArray[i]) {
+            if (min > numberArray[i]) {
                 min = numberArray[i];
                 System.out.println(min);
                 numberArray[i] = 0;

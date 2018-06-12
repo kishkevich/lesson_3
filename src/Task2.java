@@ -3,34 +3,23 @@ import java.util.Arrays;
 public class Task2 {
 
     public static void main(String[] args) {
-        int[] array = {10, 7, 4, 2, 6, 9, 10, 3, 2, 10};
-        int i;
-        int j;
-        int num = 0;
-        int count_repeat = 0;
-        int max_repeat = 0;
 
-        System.out.println(Arrays.toString(arr));
+        int[] array = {10, 7, 4, 2, 6, 9, 10, 3, 2, 1};
+        int count = 1;
 
-        for (i = 0; i < array.length; i++) {
-            count_repeat = 1;
 
-            for (j = i + 1; j < array.length; j++) {
-                num = array[i];
-
-                if (array[i] == array[j] && (j != i)) {
-                    count_repeat++;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    count++;
                 }
             }
-            if ((max_repeat <= count_repeat) && (count_repeat != 1)) {
-                max_repeat = count_repeat;
-                System.out.println("Число [" + num + "] встречается: " + max_repeat);
+            if (count > 1) {
+                System.out.println("Элемент [" + array[i] + "] повторяется " + count + " раз(а)");
+                i = i + count - 1;
+
             }
-        }
-        if (max_repeat == 0) {
-            System.out.println("Числа в массиве НЕ повторяются ");
-
-
+            count = 1;
         }
     }
 
